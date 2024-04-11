@@ -158,7 +158,7 @@ final class Profiler
     public function save(array $data = array())
     {
         if (!$data) {
-            return;
+            return false;
         }
 
         $saver = $this->getSaver();
@@ -168,7 +168,7 @@ final class Profiler
             throw new ProfilerException('Unable to create profiler: Unable to create saver');
         }
 
-        $saver->save($data);
+        return $saver->save($data);
     }
 
     /**

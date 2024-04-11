@@ -29,9 +29,7 @@ final class UploadSaver implements SaverInterface
     public function save(array $data)
     {
         $json = json_encode($data);
-        $this->submit($this->url, $json);
-
-        return true;
+        return $this->submit($this->url, $json);
     }
 
     /**
@@ -82,5 +80,7 @@ final class UploadSaver implements SaverInterface
             $message = isset($response['message']) ? $response['message'] : 'Error in response';
             throw new ProfilerException($message);
         }
+
+        return $response;
     }
 }
