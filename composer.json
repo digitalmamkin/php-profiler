@@ -1,5 +1,5 @@
 {
-	"name": "perftools/php-profiler",
+	"name": "vinewu/php-profiler",
 	"description": "PHP Profiling based on XHGui",
 	"license": "MIT",
 	"authors": [
